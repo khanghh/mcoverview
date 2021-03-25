@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  mcoverview:
+    build: .
+    container_name: overview
+    volumes:
+      - ./versions:/root/.minecraft/versions
+      - ./worlds:/var/minecraft/worlds
+      - ./output:/var/minecraft/output
+      - ./config.py:/var/minecraft/config.py
